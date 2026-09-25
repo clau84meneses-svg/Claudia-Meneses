@@ -123,9 +123,42 @@ if (formulario) {
         const nombreInput = document.getElementById("nombre").Value.trim();
         const emailInput = document.getElementById("email").Value.trim();
         const mensajeInput = document.getElementById("mensaje").Value.trim();
+        const resultado = document.getElementById("resultado");
         if (nombreInput ==="" || emailInput === "" || mensajeInput === "" ) {
-            alert("Por favor, completá todoslos campos.");
+            resultado.textContent = "Por favor, completa todos los campos.";
+            resultado.style.color = "#ba55d3";
+        } else {
+            resultado.textContent = "Mensaje enviado correctamente!";
+            resultado.style.color = "green";
             formulario.reset();
+        }
+    });
+}
+const formularioEdad = document.getElementById("formulario-edad");
+if (formularioEdad) {
+    formularioEdad.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const fechaNacimientoInput = document.getElementById("fechaNacimiento").value;
+        const resultadoTexto = document.getElementById("resultado-edad");
+        if(fechaNacimientoInput) {
+            const fechaNacimiento = new Date(fechaNacimientoInput);
+            const fechaActual = new Date();
+            let edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
+            const mesActual = fechaActual.getMonth();
+            const diaActual = fechaActual.getDate();
+            const mesNacimiento = fechaNacimiento.getMonth();
+            const diaNacimiento = fechaNacimiento.getDate();
+            if (mesActual < mesNacimiento || (mesActual === mesNacimiento && diaActual <diaNacimiento)) {
+                edad--;
+            }
+            resultadoTexto.textContent = "La edad es:" +edad+ "años.";
+            resultadoTexto.style.color = "violet";
+            resultadoTexto.style.textAlign = "center";
+            resultadoTexto.style.fontWeight = "bold";
+            resultadoTexto.style.marginTop = "10px";
+        } else {
+            resultadoTexto.textContent = "Por favor, ingresá una fecha válida.";
+            resultadoTexto.style.color = "red";
         }
     });
 }
