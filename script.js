@@ -80,19 +80,19 @@ const imagen = [
     "fotos/Set dia especial.png"
 ];
 let indiceActual = 0;
-const imgElement = document.getElementById("imagen-carrousel");
+const imgElement = document.getElementById("imagen-carrusel");
 const btnAnterior = document.getElementById("boton-anterior");
 const btnSiguiente = document.getElementById("boton-siguiente");
 function mostrarImagen() {
     if(imgElement) {
-        imgElement.src = ismagenes[indiceActual];
+        imgElement.src = imagen[indiceActual];
     }
 }
 if (btnAnterior) {
     btnAnterior.addEventListener("click", function() {
     indiceActual--;
     if(indiceActual < 0) {
-    indiceActual = imagenes.length - 1;
+    indiceActual = imagen.length - 1;
     }
     mostrarImagen();
     }); 
@@ -100,10 +100,32 @@ if (btnAnterior) {
 if (btnSiguiente) {
     btnSiguiente.addEventListener("click", function() {
         indiceActual++;
-        if (indiceActual >= imagenes.length) {
+        if (indiceActual >= imagen.length) {
             indiceActual = 0;
     }
     mostrarImagen();
     });
 }
 mostrarImagen();
+if(imgElement) {
+    imgElement.addEventListener("click", function() {
+        indiceActual++;
+        if (indiceActual >= imagen.length) {
+            indiceActual = 0;
+        }
+        mostrarImagen();
+    });
+}
+const formulario = document.querySelector(".formulario-contacto");
+if (formulario) {
+    formulario.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const nombreInput = document.getElementById("nombre").Value.trim();
+        const emailInput = document.getElementById("email").Value.trim();
+        const mensajeInput = document.getElementById("mensaje").Value.trim();
+        if (nombreInput ==="" || emailInput === "" || mensajeInput === "" ) {
+            alert("Por favor, completá todoslos campos.");
+            formulario.reset();
+        }
+    });
+}
