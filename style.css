@@ -87,7 +87,7 @@ img {
 .btn-instagram:hover {
     background-color: #ba55d3;
 }
-.btn-whatsap {
+.btn-whatsApp {
     display: inline-block;
     background-color: #ce04f7;
     color: #ffffff;
@@ -96,12 +96,13 @@ img {
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
-.btn-whatsap:hover { 
+.btn-whatsApp:hover { 
     background-color: #ba55d3;
 } 
-section{
+section {
     margin: 20px;
-    padding: 20px;
+    width: 100%;
+    padding: 30px;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -110,7 +111,7 @@ section{
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 30%; 
+    width: 300px;
     box-sizing: border-box;
     background-color: #e7c4f1;
     border: 2px solid #e0e0e0;
@@ -187,7 +188,7 @@ nav a:hover {
     bottom: 20px;
     right: 20px;
     display: none;
-    background-color: #ff007f;
+    background-color: #f5d3e1;
 color: white;
 border: none;
 padding: 10px 15px;
@@ -197,5 +198,66 @@ font-size: 14px;
 z-index: 1000;
 }
 #volverArriba:hover {
-    background-color: #e0006c;
+    background-color: #ba55d3;
+}
+.btn-conoce-mas {
+    background-color: #ffffff;
+    color: #e7c4f1;
+    border: 2px solid #fbebf7;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+    box-shadow: 0 4px 8px rgba(0, 0,0, 0.15);
+    transition: all 0.3s ease;
+}
+.btn-conoce-mas:hover {
+    background-color: #fbebf7;
+    color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+.controles-fuente {
+    margin: 15px auto;
+    text-align: center;
+}
+.controles-fuente button {
+    background-color: #ffffff;
+    color: #ba55d3;
+    border: 2px solid #fbebf7;
+    padding: 6px 12px;
+    margin: 0 4px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+.controles-fuente button:hover {
+    background-color: #fbebf7;
+    transform: translateY(-1px);
+}
+.carrusel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px auto;
+}
+#imagen-carrusel {
+    width: 400px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+#boton-anterior, #boton-siguiente{
+    display: none;
+}
+#imagen-carrusel {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+#imagen-carrusel:hover {
+    transform: scale(1.02);
 }
