@@ -10,12 +10,12 @@
 <header>
     <h1 id="titulo">Subly Sueños</h1>
     <h2><strong> Bienvenidos a Subly Sueños </strong></h2>
-    <button id="botoncambiar">Conocé más!!</button>
     <nav>
         <ul>
             <li><a href="#regalos">Inicio</a></li>
             <li><a href="#nuevos">Productos</a></li>
             <li><a href="#contacto">Contacto</a></li>
+            <li><button id="botoncambiar" class="btn-conoce-mas">Conocé más!!</button></li>
         </ul>
     </nav>
     </header>
@@ -26,9 +26,9 @@
     </div>
 <main> 
     <div class="carrousel-container">
-        <button id="boton-anterior"> </button>
-        <img id="imagen-carrousel" src=""alt="carrousel" width="400" height="300">
-        <button id="boton-siguiente"> </button>
+        <button id="boton-anterior">&#10094;</button>
+        <img id="imagen-carrusel" src="fotos/agenda.jpeg"alt="carrusel" width="400" height="300">
+        <button id="boton-siguiente">&#10095;</button>
     </div>
  <section id="regalos">
 <h3> Regalos personalizados </h3> 
@@ -67,20 +67,30 @@
   <a href="#"class="btn-toggle" >Ver más</a>     
 </article>
 <article class="card">
+<img src= "fotos/morral porta termo con yerbero y azucarero.jpg" alt="bolso y set matero">
+<p>¿Buscás comodidad sin perder el estilo? Presentamos nuestro Bolso Matero Premium, diseñado especialmente para acompañarte a todos lados. </p>
+<a href="#" class="btn-toggle"> Ver más</a>
+</article>
+<article class="card">
 <img src= "fotos/Set dia especial.png" alt="Productos">
   <p> Productos para diferentes ocaciones como Dia del Maestro, Dia de la Madre, cumpleaños, aniversarios y muchos más... </p> 
 <a href="#"class="btn-toggle" >Ver más</a> 
 </article>
-<article class="Card">
+<article class="card">
     <img src="fotos/Remera.jpg" alt="Remeras">
 <p>Una remera que dice exactamente lo que estás pensando "Para no tener que hablar".</p>
 <a href="#"class="btn-toggle" >Ver más</a> 
 </article>
+<article class="card">
 <img src="fotos/Remera 2.jpg" alt="Remeras">
 <p> Tu diseño, tu estilo. Traé tu idea y nosotros la estampamos con la mejor calidad.</p>
+<a href="#"class="btn-toggle" >Ver más</a> 
 </article>
+<article class="card">
 <img src= "fotos/Caja con foto calendario.jpeg" alt="Calendario especiales">
 <p>Un año entero de sonrisas. Regalá un calendario con tus fotos favoritas y reviví los mejores momentos cada día.</p>
+<a href="#"class="btn-toggle" >Ver más</a>
+</article>
 <table class="tabla-catalogo">
     <tr>
         <th>Producto</th>
@@ -111,13 +121,25 @@
    </section>  
 <section id="contacto">
    <h3>Contacto</h3>
-    <p id="texto-pagina">Contactanos para mas informacion y pedidos a traves de nuestras redes:</p>  
-     <p>
-<a href="https://www.instagram.com/subly_clau" target="_blank" class="btn-instagram">Instagram</a>
-     </p>
-     <p>
-  <a href="https://wa.me/c/5493516131811" target="_blank" class="btn-whatsap">Envianos un mensaje por whatsapp y te responderemos a la brevedad.</a>
-</p>
+ <div class="contenedor-formulario">
+    <h2>Formulario de contacto</h2>
+    <form action="#" method="post" class="formulario-contacto">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí.." required></textarea>
+        <button type="submit" id="btn-enviar">Enviar mensaje</button>
+    </form>
+ </div> 
+ <p id="texto-pagina"> Contactanos para más infomacion y pedidos a traves de nuestras redes</p>
+ <p>
+    <a href="https://instagram.com/subly_clau/" target="_blank" class="btn-instagram">Instagram</a>
+ </p>
+ <p>
+    <a href="https://wa.me/c/5493516131811" target="_blank" class="btn-whatsApp">whatsApp</a>
+ </p>
 </section>  
     <footer>
         <p>&copy; 2026 Subly Sueños. Todos los derechos reservados.</p>
